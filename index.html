@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <script src="https://app.divshot.com/js/jquery.min.js"></script>
+    <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
+    <title>Geração de Relatórios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://app.divshot.com/themes/journal/bootstrap.min.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css"> 
+  </head>
+  
+  <body>
+    <title>Geração de Relatórios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://app.divshot.com/themes/journal/bootstrap.min.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/divshot-util.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/divshot-canvas.css">
+    <title>Geração de Relatórios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/divshot-util.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/divshot-canvas.css">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Geração de Relatórios</a>
+          <div class="navbar-content">
+            <ul class="nav  pull-right">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="http://www.raiosx.ufc.br/solicitacao/">Solicitação</a>  
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h1>Um Guia para Geração de Relatórios</h1>
+      </div>
+      <p class="lead">A geração de relatórios atualmente se dá a partir de dois passos:</p>
+      <div>
+        <br> 
+      </div>
+      <p></p>
+      <dl>
+        <dt>Gerar Relatórios a partir do site</dt>
+        <dd>É possível pegar o nome de cada solicitante, professor, grupo de pesquisa,
+          quantidade de amostras que foram realizadas.</dd>
+        <dt>Gerar Relatórios a partir dos arquivos dados pela máquina</dt>
+        <dd>Com esses arquivos é possível saber quanto tempo cada máquina foi utilizada.</dd>
+      </dl>
+      <div class="row">
+        <div class="well">
+          <div class="well">
+            <div class="hero-unit">
+              <h1>Site</h1>
+              <p></p>
+              <ol>
+                <li>
+                  <span style="color: inherit;">Logue-se como administrador</span>
+                  <br> 
+                </li>
+                <li>
+                  <span style="color: inherit;">Clique em Gerar Relatórios</span>
+                  <br> 
+                </li>
+                <li>
+                  <span style="color: inherit;">Escolha o ano, mês e a máquina desejada</span>
+                  <br> 
+                </li>
+              </ol>
+              <p></p>
+              <p>
+                <a class="btn btn-primary btn-large" href="http://www.raiosx.ufc.br/solicitacao/">Ir para o Site</a> 
+              </p>
+            </div>
+          </div>
+          <div class="well">
+            <div class="hero-unit">
+              <h1>Arquivos da Máquina</h1>
+              <p></p>
+              <ol>
+                <li>
+                  <span style="color: inherit;">Faça o upload dos arquivos dos meses desejados.</span>
+                  <br> 
+                </li>
+                <li>
+                  <span style="color: inherit;">Após isso você irá obter um link para um arquivo csv contendo as informações
+                    dos arquivos desejados.</span>
+                  <br>
+                  <iframe src="file-uploader/test/jquery.html"  height="100%" width="100%" frameborder="0"></iframe> 
+                </li>
+              </ol>
+              <p></p>
+              <p>
+                <a class="btn btn-primary btn-large" onClick="gerarArquivo()">Gerar arquivo CSV</a> 
+              </p>
+              <div class="alert" id="result">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-info lead">Laboratório de Raios-X</p>
+    </div>
+<script>
+
+    function gerarArquivo(){
+      $("#result").show();
+      $("#result").load('gerar_csv.php');
+
+    }
+    $(document).ready(function() {
+        $("#result").hide();
+    });
+</script>
+  </body>
+
+</html>
